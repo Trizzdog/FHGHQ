@@ -124,6 +124,7 @@ export class LogiCalc extends React.Component {
   render() {
     //console.log(this.state.array)
     //console.log("Rendering logi calc")
+    console.log("COST OBJECT", cost);
     return (
       <React.Fragment>
         <p>Orders Calculator</p>
@@ -158,10 +159,15 @@ export class LogiCalc extends React.Component {
                     className="totalicon"
                     src={cost.cost[0][2].src}
                   />
-                  {this.GetTotal("e")}
+                  {this.GetTotal("a")}
                   <img
                     className="totalicon"
-                    src={cost.cost[0][8].src}
+                    src={cost.cost[0][6].src}
+                  />
+                  {this.GetTotal("ir")}
+                  <img
+                    className="totalicon"
+                    src={cost.cost[0][7].src}
                   />
                   {this.GetTotal("he")}
                   <img
@@ -233,7 +239,13 @@ export class LogiCalc extends React.Component {
                     <th>
                       <img
                         className="tabletotalicon"
-                        src={cost.cost[0][8].src}
+                        src={cost.cost[0][6].src}
+                      />
+                    </th>
+                    <th>
+                      <img
+                        className="tabletotalicon"
+                        src={cost.cost[0][7].src}
                       />
                     </th>
                   </tr>
